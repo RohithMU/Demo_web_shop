@@ -29,7 +29,29 @@ public class Elements {
 	public static By digitaldownloads = By.xpath("//*[@class='top-menu']/li[5]");
 	public static By jewelary = By.xpath("//*[@class='top-menu']/li[6]");
 	public static By giftcards = By.xpath("//*[@class='top-menu']/li[7]");
-//	*******************************Information***********************************************
+//	*******************************Books******************************************************
+	public static By sortby = By.xpath("//*[@id='products-orderby']");
+	public static By display = By.xpath("//*[@id='products-pagesize']");
+	public static By viewas = By.xpath("//*[@id='products-viewmode']");
+	public static By addtocart = By.xpath("(//*[@value='Add to cart'])[1]");
+	public static By shoppingcart = By.xpath("(//*[.='Shopping cart'])[1]");
+	public static By shoppingcartquantity = By.xpath("//*[.='(1)']");
+	public static By Books = By.xpath("(//*[.='Books'])[2]");
+	public static By cartqty = By.xpath("//*[@class='ico-cart']/span[2]");
+//	*******************************Computers**************************************************
+	public static By computerspage = By.xpath("//*[.='Computers']/../../div/h1");
+	public static By desktop = By.xpath("//*[@title='Show products in category Desktops']/../../h2/a");
+	public static By notebooks = By.xpath("//*[@title='Show products in category Desktops']/../../../../div[2]");
+	public static By accessories = By.xpath("//*[@title='Show products in category Desktops']/../../../../div[3]");
+
+//	*******************************Desktop*****************************************************
+	public static By desktoppage = By.xpath("//*[.='Desktops']/../../li[3]");
+	public static By barnotification = By.xpath("//*[@id='bar-notification']");
+//	*******************************Notebooks***************************************************
+	public static By notebookspage = By.xpath("//*[.='Notebooks']/../../../div/div/h1");
+//	*******************************Accessories*************************************************
+	public static By accessoriespage = By.xpath("//*[.='Accessories']/../../../div/div/h1");
+//	*******************************Information*************************************************
 	public static By sitemap = By.xpath("//*[.='Sitemap']/../li[1]");
 	public static By shippingandreturns = By.xpath("//*[.='Sitemap']/../li[2]");
 	public static By privacynotice = By.xpath("//*[.='Sitemap']/../li[3]");
@@ -76,7 +98,15 @@ public class Elements {
 	public static By newsletter = By.xpath("//*[@id='newsletter-email']");
 	public static By subscribe = By.xpath("//*[@id='newsletter-subscribe-button']");
 	public static By verifymailid = By.xpath("(//*[.='rohithpatilmu@gmail.com'])[2]");
-//	*******************************Shopping cart******************************************
+	public static By noaccountfoundmessage = By.xpath("//*[.='No customer account found']");
+	public static By incorrectcredentials = By.xpath("//*[.='The credentials provided are incorrect']");
+	public static By validemail = By.xpath("//*[.='Please enter a valid email address.']");
+//	public static By incorrectcredentials = By.xpath("");
+//	public static By incorrectcredentials = By.xpath("");
+	
+	
+//	*******************************Shopping cart************************************************
+	public static By shoppingcartpage = By.xpath("//*[.='Shopping cart']/../../div/h1");
 	public static By remove = By.xpath("//*[.='Remove:']");
 	public static By quantity = By.xpath("//*[.='Qty.:']");
 	public static By price = By.xpath("//*[.='Price:']");
@@ -93,27 +123,35 @@ public class Elements {
 	public static By addgiftcard = By.xpath("//*[@name='applygiftcardcouponcode']");
 	public static By termsofservice = By.xpath("//*[@id='termsofservice']");
 	public static By checkout = By.xpath("//*[@id='checkout']");
+//	*******************************Checkout*****************************************************
+	public static By checkoutpage = By.xpath("//*[.='Checkout']");
 	public static By billingaddresscontinue = By.xpath("//*[@onclick='Billing.save()']");
 	public static By instorepickup = By.xpath("//*[@onclick='Shipping.togglePickUpInStore(this)']");
+	public static By shippingaddress = By.xpath("//*[.='Shipping address']");
 	public static By shippingaddresscontinue = By.xpath("//*[@onclick='Shipping.save()']");
 	public static By shippingaddressback = By.xpath("//*[@id='shipping-buttons-container']/p/a");
 	public static By ground = By.xpath("//*[@id='shippingoption_0']");
 	public static By nextdayair = By.xpath("//*[@id='shippingoption_1']");
 	public static By seconddayair = By.xpath("//*[@id='shippingoption_2']");
+	public static By shippingmethod = By.xpath("//*[.='Shipping method']");
 	public static By shippingmethodback = By.xpath("//*[@id='shipping-method-buttons-container']/p/a");
-	public static By shippingmetjodcontinue = By.xpath("//*[@onclick='ShippingMethod.save()']");
+	public static By shippingmethodcontinue = By.xpath("//*[@onclick='ShippingMethod.save()']");
 	public static By cashondelivery = By.xpath("//*[@id='paymentmethod_0']");
 	public static By checkormoneyorder = By.xpath("//*[@id='paymentmethod_1']");
 	public static By creditcard = By.xpath("//*[@id='paymentmethod_2']");
 	public static By purchaseorder = By.xpath("//*[@id='paymentmethod_3']");
+	public static By paymentmethod = By.xpath("//*[.='Payment method']");
 	public static By paymentmethodback = By.xpath("//*[@id='payment-method-buttons-container']/p/a");
 	public static By paymentmethodcontinue = By.xpath("//*[@onclick='PaymentMethod.save()']");
+	public static By paymentinformation = By.xpath("//*[.='Payment information']");
 	public static By paymentinfoback = By.xpath("//*[@id='payment-info-buttons-container']/p/a");
 	public static By paymentinfocontinue = By.xpath("//*[@onclick='PaymentInfo.save()']");
+	public static By confirmorder = By.xpath("//*[.='Confirm order']");
 	public static By confirmorderback = By.xpath("//*[@id='confirm-order-buttons-container']/p/a");
 	public static By confirm = By.xpath("//*[@onclick='ConfirmOrder.save()']");
 	public static By clickherefororderdetails = By.xpath("//*[.='Click here for order details.']");
 	public static By thankyoucontinue = By.xpath("//*[@value='Continue']");
+	public static By ordersuccessful = By.xpath("//*[.='Your order has been successfully processed!']");
 
 
 //	public static By purchaseorder = By.xpath("");
@@ -129,12 +167,12 @@ public class Elements {
         return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 
-    public void click(By locator)
+    public void dfind(By locator)
     {
         getElement(locator).click();
     }
 
-    public void sendKeys(By locator, String text)
+    public void dfind(By locator, String text)
     {
         WebElement element = getElement(locator);
         element.clear();
